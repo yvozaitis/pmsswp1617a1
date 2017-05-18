@@ -1,4 +1,26 @@
-# Το αρχείο Turtle του λεξιλογίου RDFS που περιγράφει
-# τις κλάσεις και τις ιδιότητες του ωρολογίου προγράμματος.
-
-
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX vozaitis: <http://dilab77.ionio.gr/swp/vozaitis/vocab#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+vozaitis:Professor rdf:type rdfs:Class .
+vozaitis:Year rdf:type rdfs:Class .
+vozaitis:Dialexh rdf:type rdfs:Class .
+vozaitis:Course rdf:type rdfs:Class .
+vozaitis:Class rdf:type rdfs:Class .
+vozaitis:Professor rdfs:subClassOf foaf:Person .
+vozaitis:year rdf:type rdf:Property .
+vozaitis:professor rdf:type rdf:Property .
+vozaitis:dialexh rdf:type rdf:Property .
+vozaitis:course rdf:type rdf:Property .
+vozaitis:class rdf:type rdf:Property .
+vozaitis:year rdfs:domain vozaitis:Year .
+vozaitis:professor rdfs:domain vozaitis:Professor .
+vozaitis:course rdfs:domain vozaitis:Course .
+vozaitis:class rdfs:domain vozaitis:Class .
+vozaitis:dialexh rdfs:domain vozaitis:Dialexh .
+vozaitis:professor rdfs:range vozaitis:Professor .
+vozaitis:course rdfs:range vozaitis:Course .
+vozaitis:class rdfs:range vozaitis:Class .
+vozaitis:year  rdfs:range xsd:string .
+vozaitis:dialexh rdfs:range xsd:date .
